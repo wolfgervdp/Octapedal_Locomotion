@@ -8,7 +8,7 @@ The project was made in [Unity](https://unity3d.com/unity). The editor is necess
 
 ## Usage
 
-When opening Unity, pressing the play button will start the simulator. There is an onscreen gui to adjust population size at runtime. This gui also allows to save a population and the all-time best individual to file. The statistics of the population over the lifetime of the simulator can be written to file too. Last, the simulator can be paused from the gui as well. Changing simulation speed can be done with alphanumerical keys 1,2 and 3. These respectively multiply the speed with x2, x5 and x10. 
+When opening Unity, pressing the play button will start the simulator. There is an onscreen gui to adjust population size at runtime. This gui also allows to save a population and the all-time best individual to file. The statistics of the population over the lifetime of the simulator can be written to file too. Last, the simulator can be paused from the gui as well. Changing simulation speed can be done with alphanumerical keys 1, 2 and 3. These respectively multiply the speed with x2, x5 and x10. 
 
 Most of the parameter values can be changed in the inspector of the God object. The God object can be found at the left hand panel. When opening the inspector (right hand panel), it's possible to change values for the initial population, elitism rates, etc. Some parameters can only be changed in the code, such as the operators which are used. For a guide on how to do this, please refer to "Changing the code" lower on this page.
 
