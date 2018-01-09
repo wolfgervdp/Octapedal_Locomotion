@@ -65,7 +65,7 @@ public class God : MonoBehaviour {
 
 		//If time is over for the current individuals
 		if (isTimeUp()) {
-			Debug.Log ("Time's up!");
+			//Debug.Log ("Time's up!");
 
 			//Evaluate all current individuals
 			for(int i = 0; i < currentIndividuals.Count; i++){
@@ -79,7 +79,7 @@ public class God : MonoBehaviour {
 			monitor.generateStatistics (evaluatedBehavior);
 
 			//Destroy generation
-			Debug.Log ("Destroying individuals.");
+			//Debug.Log ("Destroying individuals.");
 			for (int i = 0 ; i < currentIndividuals.Count; i++) {
 				UnityEngine.Object.DestroyImmediate (currentIndividuals[i].gameObject);
 			}
@@ -96,7 +96,7 @@ public class God : MonoBehaviour {
 				startNewGeneration ();
 				spawnIndividuals ();
 				monitor.printStatistics ();
-				Debug.Log ("Current variance: " + monitor.Variance);
+				//Debug.Log ("Current variance: " + monitor.Variance);
 				monitor.increaseGeneration ();
 				numberOfGenerations++;
 				Debug.Log ("---Currently at generation: " + numberOfGenerations + "---");
@@ -112,8 +112,8 @@ public class God : MonoBehaviour {
 	private void spawnIndividuals(){
 		//Spawn new individuals with new behavior 
 		int numOfNewIndividuals = Mathf.Min (concurrentTestSize, behaviorsToEvaluate.Count);
-		Debug.Log ("Still " +  behaviorsToEvaluate.Count + " individuals left to test.");
-		Debug.Log ("Spawning " + numOfNewIndividuals + " new  individuals.");
+		//Debug.Log ("Still " +  behaviorsToEvaluate.Count + " individuals left to test.");
+		//Debug.Log ("Spawning " + numOfNewIndividuals + " new  individuals.");
 		for(int i = 0; i < numOfNewIndividuals; i++){
 			//Debug.Log ("Spawning individual " + i);
 			BotBehavior b = behaviorsToEvaluate.Dequeue ();
@@ -177,7 +177,7 @@ public class God : MonoBehaviour {
 
 
 		evaluatedBehavior.Clear ();
-		Debug.Log ("New generation contains " + nextGen.Count + " behaviors.");
+		//Debug.Log ("New generation contains " + nextGen.Count + " behaviors.");
 		//Set new generation
 		behaviorsToEvaluate = new Queue<BotBehavior> (nextGen);
 
@@ -191,7 +191,7 @@ public class God : MonoBehaviour {
         parent.Sort((x, y) => y.Key.CompareTo(x.Key));
 
         for (int i = 0; i < numberToKeep; i++) {
-            nextGen.Add(parent[numberToKeep].Value);
+            nextGen.Add(parent[i].Value);
         }
 
         nextGen.AddRange(children);

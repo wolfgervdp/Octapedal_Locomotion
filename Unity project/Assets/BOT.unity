@@ -51523,9 +51523,9 @@ MonoBehaviour:
   followCamera: {fileID: 563881091}
   individualPrefab: {fileID: 601968779}
   timeToEvaluate: 10
-  populationSize: 30
+  populationSize: 200
   concurrentTestSize: 300
-  elitePercentage: 0.1
+  elitePercentage: 0.05
   selectionProb: 0.6
   randomSeed: 8
 --- !u!4 &2026689063
